@@ -22,6 +22,7 @@ namespace WebApplication1.Models
         public static List<Personoftheyear> GetPersons(int startYear, int endyear)
         {
             List<Personoftheyear> PersonData = new List<Personoftheyear>();
+
             string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "../../../wwwroot/personOfTheYear.csv");
             var personData = File.ReadAllText(path);
             List<string> lists = new List<string>();
