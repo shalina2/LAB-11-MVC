@@ -1,5 +1,24 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME PAGE</title>
+    <link href="~/StyleSheet.css" rel="stylesheet" />
+    
+</head>
+<body>
+    <h1>TIME</h1>
+    <p>Person of the Year</p>
+    <p>Filter by Year</p>
+    <div>
+        <form method="post">
+            <label name="startYear">StartYear</label>
+            <input min="1927" max="2016" name="startYear" type="number" />
+
+            <label name="endYear">EndYear</label>
+            <input min="1927" max="2016" name="endYear" type="number" />
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
