@@ -41,7 +41,7 @@ namespace WebApplication1.Models
                 if (startYear >= 1927 && endyear <= 2016)
                 {
 
-                    string[] lists = item.Split(',');
+                    string[] lists = item.split(',');
                     Personoftheyear person = new Personoftheyear();
                     person.Year = (lists[0] == "" ? 0 : Convert.ToInt32(lists[0]));
                     person.Honor = lists[1];
