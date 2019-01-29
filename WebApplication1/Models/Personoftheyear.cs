@@ -17,8 +17,8 @@ namespace WebApplication1.Models
         public string Title { get; set; }
         public string Category { get; set; }
         public string Context { get; set; }
-       // public static IEnumerable<object> PersonData { get; private set; }
 
+      
         public static List<Personoftheyear> GetPersons(int startYear, int endyear)
         {
             List<Personoftheyear> PersonData = new List<Personoftheyear>();
@@ -37,9 +37,9 @@ namespace WebApplication1.Models
 
 
             foreach (var item in lines)
-            { 
-               // if (startYear >= 1927 && endyear <= 2016)
-               // {
+            {
+                if (startYear >= 1927 && endyear <= 2016)
+                {
 
                     string[] columns = item.Split(',');
                     Personoftheyear person = new Personoftheyear();
@@ -52,14 +52,15 @@ namespace WebApplication1.Models
                     person.Title = columns[6];
                     person.Category = columns[7];
                     person.Context = columns[8];
-                PersonData.Add(person);
+                    PersonData.Add(person);
                 }
 
                 List<Personoftheyear> listofPeople = PersonData.Where(p => (p.Year >= startYear) && (p.Year <= endyear)).ToList();
                 return listofPeople;
             }
-           
+
         }
     }
+}
 
 
